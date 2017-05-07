@@ -76,16 +76,19 @@ li {
 
 .trippy {
   font-family: "Love Ya Like A Sister", sans-serif;
+}
+
+.trippy-header-size {
   font-size: 4rem;
   text-shadow: 4px 4px 4px #aaa;
 }
 
 .chicago {
-  font-family: "Poppins", sans-serif;
-  font-size: 3.5rem;
+  font-family: "Kanit", sans-serif;
+  font-size: 3.8rem;
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-brand:hover {
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-brand:hover, span.chicago.chicago-expand:hover {
     background-color: white;
     color: $chicago-blue;
 }
@@ -102,6 +105,39 @@ span.filter-option.pull-left, span.caret {
   float: right
 }
 
+.bottom-day {
+  width: 27%;
+  color: #aaa
+}
+
+.bottom-list {
+  width: 70%;
+}
+
+.whazzup {
+  font-size: 4em;
+  color: $chicago-blue;
+  text-shadow: 1px 1px 1px #aaa;
+}
+
+.for {
+  font-size: 2em;
+}
+
+.main {
+  font-family: 'Kanit', sans-serif;
+  font-size: 82px;
+  text-align: center;
+}
+
+.move-up-25 {
+  margin-top: -25px;
+}
+
+.move-up-55 {
+  margin-top: -55px;
+}
+
 .bean-img {
     position: absolute;
     top: 12vh;
@@ -112,6 +148,7 @@ span.filter-option.pull-left, span.caret {
 .rotate-in-2-cw {
   float: right;
   width: 200px;
+  transition-delay: 2.5s;
 	-webkit-animation: rotate-in-2-cw 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	-moz-animation: rotate-in-2-cw 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: rotate-in-2-cw 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -124,23 +161,31 @@ span.filter-option.pull-left, span.caret {
   height: 40px;
 	-webkit-animation: rotate-center 4s linear infinite both;
 	-moz-animation: rotate-center 4s linear infinite both;
-	animation: rotate-center 4s linear infinite both;
+	animation: rotate-center 4\s linear infinite both;
 }
 
 @-webkit-keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
 
 .trippy-pop-up {
-	-webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	-moz-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: trippy-pop-up 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-moz-animation: trippy-pop-up 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: trippy-pop-up 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@-webkit-keyframes trippy-pop-up {0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}@keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
+@-webkit-keyframes trippy-pop-up {0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}@keyframes trippy-pop-up{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
 
 .chicago-expand {
-	-webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	-moz-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	animation: tracking-in-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	-webkit-animation: chicago-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	-moz-animation: chicago-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: chicago-expand 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-@-webkit-keyframes chicago-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+@-webkit-keyframes chicago-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes chicago-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+
+.jiggle:hover {
+	-webkit-animation: jiggle 0.8s 3 both;
+	-moz-animation: jiggle 0.8s 3 both;
+	animation: jiggle 0.8s 3 both;
+}
+
+@-webkit-keyframes jiggle{0%,100%{-webkit-transform:translateX(0);transform:translateX(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%}15%{-webkit-transform:translateX(-30px) rotate(-6deg);transform:translateX(-30px) rotate(-6deg)}30%{-webkit-transform:translateX(15px) rotate(6deg);transform:translateX(15px) rotate(6deg)}45%{-webkit-transform:translateX(-15px) rotate(-3.6deg);transform:translateX(-15px) rotate(-3.6deg)}60%{-webkit-transform:translateX(9px) rotate(2.4deg);transform:translateX(9px) rotate(2.4deg)}75%{-webkit-transform:translateX(-6px) rotate(-1.2deg);transform:translateX(-6px) rotate(-1.2deg)}}@keyframes jiggle{0%,100%{-webkit-transform:translateX(0);transform:translateX(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%}15%{-webkit-transform:translateX(-30px) rotate(-6deg);transform:translateX(-30px) rotate(-6deg)}30%{-webkit-transform:translateX(15px) rotate(6deg);transform:translateX(15px) rotate(6deg)}45%{-webkit-transform:translateX(-15px) rotate(-3.6deg);transform:translateX(-15px) rotate(-3.6deg)}60%{-webkit-transform:translateX(9px) rotate(2.4deg);transform:translateX(9px) rotate(2.4deg)}75%{-webkit-transform:translateX(-6px) rotate(-1.2deg);transform:translateX(-6px) rotate(-1.2deg)}}
