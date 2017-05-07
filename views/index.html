@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block navbar %}
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <div class="navbar-left">
+        <img src="/images/chicago-star.png"  class="rotate-center star">
+        <img src="/images/chicago-star.png"  class="rotate-center star">
+        <img src="/images/chicago-star.png"  class="rotate-center star">
+        <img src="/images/chicago-star.png"  class="rotate-center star">
+        <a class="navbar-brand" href="#"><span class="trippy trippy-pop-up">Trippy</span> <span class="chicago chicago-expand">Chicago</span></a>
+        <ul class="nav navbar-nav">
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <form class="navbar-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<img src="/images/cloud-gate.jpg" class="bean-img rotate-in-2-cw">
+{% endblock %}
+
+
+{% block content %}
+<select id="hotel-select" class="selectpicker" multiple title="Hotels" data-style="btn-danger">
+  {% for hotel in hotels %}
+    <option value={{hotel.id}}>{{hotel.name}}</option>
+  {% endfor %}
+</select>
+
+<select id="restaurant-select" class="selectpicker" multiple title="Restaurants" data-style="btn-success">
+    {% for restaurant in restaurants %}
+      <option value={{restaurant.id}}>{{restaurant.name}}</option>
+    {% endfor %}
+</select>
+
+<select id="activity-select" class="selectpicker" multiple title="Activities" data-style="btn-primary">
+    {% for activity in activities %}
+      <option value={{activity.id}}>{{activity.name}}</option>
+    {% endfor %}
+</select>
+{% endblock %}

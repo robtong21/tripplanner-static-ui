@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trip Planner - {% block title %}{% endblock %}</title>
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <script src="/jquery/jquery.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3XKzlinjUIrV2n3g08VJixhNSU9jTy9w"
+  type="text/javascript"></script>
+  <script src="js/map-styles.js"></script>
+  <script src="js/map.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Tangerine|Quicksand|Passion+One">
+</head>
+<body>
+  <div class="container">
+    {% block navbar %}
+    {% endblock %}
+    <!--<div class="navbar navbar-inverse navbar-nav">
+      <li><a href="/">Trippy Chicago</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </div>-->
+    <div id="map-container">
+      <div id="map-canvas" class="map col-lg-8">
+      </div>
+      <div class="selector">
+
+      {% block content %}
+      {% endblock %}
+
+      </div>
+    </div>
+    <div class="itinerary">
+    </div>
+  </div>
+</body>
+</script>
+</html>
