@@ -6,7 +6,7 @@ function initialize_gmaps() {
     // set the map options hash
     var mapOptions = {
         center: myLatlng,
-        zoom: 13,
+        zoom: 14,
         mapTypeControl: false,
         styles: dark,
         backgroundColor: 'dark grey',
