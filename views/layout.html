@@ -1,74 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Trip Planner - {% block title %}{% endblock %}</title>
-  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-  <script src="/jquery/jquery.min.js"></script>
-  <script src="/bootstrap/js/bootstrap.min.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3XKzlinjUIrV2n3g08VJixhNSU9jTy9w"
-  type="text/javascript"></script>
-  <script src="js/map-styles.js"></script>
-  <script src="js/map.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
-  <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Tangerine|Kanit:900|Passion+One">
+    <!-- title -->
+    <title>{% block title %}{% endblock %}</title>
+    
+    <!-- js -->
+    <script src="/jquery/jquery.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- menu script -->
+    <script>function menufunct(x) { x.classList.toggle("change"); }</script>
+    
+    <!-- map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3XKzlinjUIrV2n3g08VJixhNSU9jTy9w&libraries=places" type="text/javascript"></script>
+    <script src="js/map-styles.js"></script>
+    <script src="js/map.js"></script>
+    
+    <!-- css -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
+
 <body>
-  <div class="container">
-    {% block navbar %}
-    {% endblock %}
-    <!--<div class="navbar navbar-inverse navbar-nav">
-      <li><a href="/">Trippy Chicago</a></li>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </div>-->
-    <div id="map-container">
-      <div id="map-canvas" class="map col-lg-8">
-      </div>
-      <div class="selector">
+    <div class="container">
+        <!-- map -->
+        <div id="map-canvas" class="map col-lg-8"></div>
+        
+        <!-- menu -->
+        {% block menu %}{% endblock %}
 
-      {% block content %}
-      {% endblock %}
-
-      </div>
+        <!-- selector -->
+        <!-- {% block selector %} {% endblock %} -->
+    
+        <!-- itinerary -->
+        {% block itinerary %}{% endblock %}
+        
+        <!-- content for err -->
+        {% block content %}{% endblock %}
     </div>
-    <div class="itinerary">
-      <div class="left bottom-day">
-        <p class="trippy whazzup text-center jiggle">Whazzup</p>
-        <p class="for trippy text-center move-up-25">for</p>
-        <p class="main move-up-55">Day 1</p>
-      </div>
-      <div class="panel panel-info right bottom-list">
-        <div class="panel-heading">
-          <h3 class="panel-title">
-            <ul>
-              <li class="btn-circle"><a href="/day1">1</a></li>
-            </ul>
-          </h3>
-        </div>
-        <table class="table">
-          <tr>
-            <th>My Hotel</th>
-            <th>My Restaurants</th>
-            <th>My Activities</th>
-          </tr>
-          <tr>
-            <td>Fairmont Chicago Millenium Park</td>
-            <td>Ramen-San</td>
-            <td>Wrigley Field</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>BIG & little's</td>
-            <td>Museum of Science and Industry</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
 </body>
 </script>
+
 </html>

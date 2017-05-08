@@ -1,0 +1,15 @@
+.itinerary {
+    width: 272px + 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-group {
+    width: 100%;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+}

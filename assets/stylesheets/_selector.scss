@@ -1,0 +1,24 @@
+.selector {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 90px;
+}
+
+.dropdown-menu {
+    width: 272px;
+    margin-top: -34px;
+    margin-left: 90px;
+}
+
+.right-caret {
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #000000;
+    display: inline-block;
+    height: 0;
+    opacity: 1;
+    vertical-align: center;
+    margin-left: 4px;
+}
