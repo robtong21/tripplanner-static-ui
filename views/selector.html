@@ -1,6 +1,5 @@
 {% block selector %}
 <div class="selector ">
-    <!-- hotel button -->
     <div class="btn-group-vertical" role="group">
         <button type="button" class="btn btn-default dropdown-toggle list-group-item-warning" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             rest <span class="right-caret"></span></button>
@@ -8,11 +7,9 @@
             {% for hotel in hotels %}
                 <li><a href="{{hotel.id}}">{{hotel.name}}</a></li>
             {% endfor %}
-            <!-- <li role="separator" class="divider"></li> -->
         </ul>
     </div>
     
-    <!-- restaurant button -->
     <div class="btn-group-vertical" role="group">
         <button type="button" class="btn btn-default dropdown-toggle list-group-item-success" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             food <span class="right-caret"></span></button>
@@ -24,7 +21,6 @@
         </ul>
     </div>
     
-    <!-- activity button -->
     <div class="btn-group-vertical" role="group">
         <button type="button" class="btn btn-default dropdown-toggle list-group-item-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             play <span class="right-caret"></span></button>
@@ -32,7 +28,6 @@
             {% for activity in activities %}
                 <li><a href="{{activity.id}}">{{activity.name}}</a></li>
             {% endfor %}
-            <!-- <li role="separator" class="divider"></li> -->
         </ul>
     </div>
 </div>

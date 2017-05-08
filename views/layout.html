@@ -14,7 +14,6 @@
     <!-- map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3XKzlinjUIrV2n3g08VJixhNSU9jTy9w&libraries=places" type="text/javascript"></script>
     <script src="js/map-styles.js"></script>
-    <script src="js/map.js"></script>
     
     <!-- css -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,19 +25,26 @@
         <!-- map -->
         <div id="map-canvas" class="map col-lg-8"></div>
         
-        <!-- menu -->
-        {% block menu %}{% endblock %}
-
-        <!-- selector -->
-        <!-- {% block selector %} {% endblock %} -->
+        <!-- the things on the map -->
+        <div class="things-on-map">
+            <div class="things-on-map-left">
+                <!-- selector -->
+                {% block selector %} {% endblock %}
+            </div>
+            
+            <div class="things-on-map-right">
+                <!-- menu -->
+                {% block menu %}{% endblock %}
     
-        <!-- itinerary -->
-        {% block itinerary %}{% endblock %}
-        
-        <!-- content for err -->
-        {% block content %}{% endblock %}
+                <!-- itinerary -->
+                {% block itinerary %}{% endblock %}
+            </div>
+            
+            <!-- content for err -->
+            {% block content %}{% endblock %}
+        </div>
     </div>
 </body>
-</script>
 
+<script src="js/map.js"></script>
 </html>

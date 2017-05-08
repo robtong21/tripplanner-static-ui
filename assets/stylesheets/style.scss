@@ -1,8 +1,9 @@
 //@import "menu";
-//@import "selector";
+@import "selector";
 @import "itinerary";
 
 body {
+    min-width: 400px;
     margin: 0;
 }
 
@@ -11,27 +12,55 @@ body {
     margin: 0;
 }
 
+.things-on-map {
+    margin: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+//    // transition
+//    animation-name: decrease-page-width;
+//    animation-delay: 1s;
+//    animation-fill-mode: forwards;
+    
+}
+
+.things-on-map-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .map {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
 }
 
-.menu {
-    left: 85%;
-    margin: 12px 12px 12px 12px;
-    position: relative;
-}
+//@keyframes decrease-page-width {
+//    from {
+//        flex-direction: row;
+//        justify-content: space-between;
+//    }
+//    to {
+//        flex-direction: column;
+//        justify-content: center;
+//    }
+//}
 
-.selector {
-    top: 5vh;
-    left: 5vw;
+@media (max-width: 700px)  {
+    .things-on-map {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        overflow: hidden;
+    }
+    
+    .things-on-map-left {
+        margin-bottom: 350px;
+    }
+    
+    .things-on-map-right {
+        overflow: scroll;
+    }
 }
-
-.itinerary {
-    top: 5%;
-    left: 83%;
-    margin: 12px 12px 12px 12px;
-    position: relative;
-}
-

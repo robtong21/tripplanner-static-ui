@@ -16,7 +16,7 @@ selector
 <div class="menu">
 <div class="btn-toolbar" role="toolbar">
     <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default" aria-label="home">
+        <button type="button" class="btn btn-default " aria-label="home">
             <span class="glyphicon glyphicon-bed" aria-hidden="true"></span>
         </button>
         <button type="button" class="btn btn-default" aria-label="about">
@@ -28,7 +28,7 @@ selector
     </div>
     <div class="btn-group" role="group">
         <button type="button" class="btn btn-default" aria-label="home">
-            <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
         </button>
         <button type="button" class="btn btn-default" aria-label="about">
             <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
@@ -84,6 +84,42 @@ selector
         </li>
     </ul>
     </nav>
+</div>
+{% endblock %}
+
+
+{% block selector %}
+<div class="selector ">
+    <div class="btn-group-vertical" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle list-group-item-warning" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            rest <span class="right-caret"></span></button>
+        <ul class="dropdown-menu">
+            {% for hotel in hotels %}
+                <li><a href="{{hotel.id}}">{{hotel.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="btn-group-vertical" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle list-group-item-success" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            food <span class="right-caret"></span></button>
+        <ul class="dropdown-menu">
+            {% for restaurant in restaurants %}
+                <li><a href="{{restaurant.id}}">{{restaurant.name}}</a></li>
+            {% endfor %}
+            <li role="separator" class="divider"></li>
+        </ul>
+    </div>
+    
+    <div class="btn-group-vertical" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle list-group-item-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            play <span class="right-caret"></span></button>
+        <ul class="dropdown-menu">
+            {% for activity in activities %}
+                <li><a href="{{activity.id}}">{{activity.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 {% endblock %}
 
