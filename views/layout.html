@@ -13,7 +13,8 @@
     
     <!-- map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3XKzlinjUIrV2n3g08VJixhNSU9jTy9w&libraries=places" type="text/javascript"></script>
-    <script src="js/map-styles.js"></script>
+    <script src="js/mapUtils.js"></script>
+    <script src="js/map.js"></script>
     
     <!-- css -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +45,10 @@
             {% block content %}{% endblock %}
         </div>
     </div>
+
+    <!-- master script -->
+    <script src="js/master.js"></script>
+
 </body>
 
-<script src="js/map.js"></script>
 </html>

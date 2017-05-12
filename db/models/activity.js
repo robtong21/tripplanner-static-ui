@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../_db');
+const Place = require('./place.js');
 
 const Activity = db.define('activity', {
   name: {
@@ -10,6 +11,10 @@ const Activity = db.define('activity', {
     type: Sequelize.STRING,
     defaultValue: '*',
   },
+}, {
+    defaultScope: {
+        include: [Place]
+    }
 });
 
 module.exports = Activity;

@@ -26,7 +26,6 @@ var data = {
     {name: "Alinea", place: {address: "W Willow St", city: "Chicago", state: "IL", phone: "123-456-7890", location: [41.9134555, -87.6503527]}, cuisine: "New American", price: 4},
     {name: "The Purple Pig", place: {address: "The Shops at North Bridge", city: "Chicago", state: "IL", phone: "123-456-7890", location: [41.8912974, -87.6270254]}, cuisine: "New American", price: 3},
     {name: "Velvet Taco", place: {address: "1110 N State St", city: "Chicago", state: "IL", phone: "123-456-7890", location: [41.9022287,-87.6307428]}, cuisine: "Mexican", price: 3},
-    {name: "Seoul Taco", place: {address: "738 N Clark St", city: "Chicago", state: "IL", phone: "123-456-7890", location: [40.714230, -73.998509]}, cuisine: "Korean/Mexican", price: 2},
     {name: "Cafe Babareeba", place: {address: "2024 N Halsted St", city: "Chicago", state: "IL", phone: "123-456-7890", location: [41.9189836,-87.6508765]}, cuisine: "Spanish", price: 4},
     {name: "Bongo Room", place: {address: "1152 S Wabash Ave", city: "Chicago", state: "IL", phone: "123-456-7890", location: [41.919094,-87.7187281]}, cuisine: "American", price: 4},
     {name: "BIG & little's", place: {address: "860 N Orleans St", city: "Chicago", state: "IL", phone: "123-456-7890", location: [41.89835,-87.6396717]}, cuisine: "Southern", price: 3},

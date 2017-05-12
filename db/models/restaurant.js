@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../_db');
+const Place = require('./place.js');
 
 const Restaurant = db.define('restaurant', {
   name: {
@@ -16,6 +17,10 @@ const Restaurant = db.define('restaurant', {
       max: 5,
     },
   },
+}, {
+    defaultScope: {
+        include: [Place]
+    }
 });
 
 module.exports = Restaurant;
